@@ -117,15 +117,15 @@
   <audio id="bg-music" autoplay loop>
     <source src="lagu.mp3" type="audio/mpeg">
   </audio>
-  <div id="popup">nah kan, lupa yee!</div>
+  <div id="popup">Gotcha, you forget!</div>
 
   <div id="halaman1" class="centered halaman">
-    <h1>Selamat Datang, Farha</h1>
-    <button onclick="mulaiKuis()">Mulai</button>
+    <h1>Welcome, Farha</h1>
+    <button onclick="mulaiKuis()">Start</button>
   </div>
 
   <div id="halaman2" class="centered halaman">
-    <h2>where did we first meet?</h2>
+    <h2>Where Did We First Meet?</h2>
     <button onclick="cekJawaban('A', 'B', 'halaman1', 'halaman3')">A. Alan's house</button>
     <button onclick="cekJawaban('B', 'B', 'halaman1', 'halaman3')">B. EPLC</button>
     <button onclick="cekJawaban('C', 'B', 'halaman1', 'halaman3')">C. DTM</button>
@@ -140,9 +140,9 @@
 
   <div id="halaman4" class="centered halaman">
     <h2>So, How Young Are You Today?</h2>
-    <button onclick="cekJawaban('A', 'A', 'halaman1', 'halaman5', true)">A. 21 y.0</button>
+    <button onclick="cekJawaban('A', 'A', 'halaman1', 'halaman5', true)">A. 21 y.o</button>
     <button onclick="cekJawaban('B', 'A', 'halaman1', 'halaman5', true)">B. 31 y.o</button>
-    <button onclick="cekJawaban('C', 'A', 'halaman1', 'halaman5', true)">C. 41 y.0</button>
+    <button onclick="cekJawaban('C', 'A', 'halaman1', 'halaman5', true)">C. 41 y.o</button>
   </div>
 
   <div id="halaman5" class="centered halaman">
@@ -187,7 +187,7 @@ On your special day, I wish you happiness that never ends, strength that never f
     function cekJawaban(pilihan, jawabanBenar, halamanSalah, halamanBenar, terakhir = false) {
       if (pilihan === jawabanBenar) {
         if (terakhir) {
-          showPopup('Alhamdullilah inget', 3000);
+          showPopup('Damn, you actually remembered', 3000);
           setTimeout(() => keHalaman(halamanBenar), 3500);
         } else {
           keHalaman(halamanBenar);
@@ -259,7 +259,7 @@ On your special day, I wish you happiness that never ends, strength that never f
 
     function checkSolved() {
       if (currentOrder.every((src, i) => src.endsWith(`piece${i}.png`))) {
-        showPopup('Anak Widit pinter juga nyusun puzzle', 3000);
+        showPopup('Impressive! You cracked the puzzle', 3000);
         setTimeout(() => keHalaman('akhir'), 3500);
       }
     }
